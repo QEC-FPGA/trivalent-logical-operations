@@ -1,0 +1,53 @@
+{
+  "cohort": "H_correlated_20261109",
+  "sampling": "physical Stim circuit; both decoder construction and decoding enable correlations; whole-circuit errors/shots",
+  "seed_policy": "Reuse supplement seeds and 2048-shot batches for the four confirmation points; new recorded seeds for historical points.",
+  "pooling": "Never merge ordinary and correlated counts; diagnostics excluded",
+  "source_hashes": {
+    "bridge_wide_memory_framework_v3.py": {
+      "archived_sha256": "51ff55ece63797e18739fa198c15aafcbf45a71b8b716140954e5ebdd08a85c5",
+      "current_file": "src/h/bridge_wide_memory_framework_v3.py"
+    },
+    "bridge_wide_memory_user_spec.py": {
+      "archived_sha256": "edf19aea1762ee3f9d6a6d94b100d1b80c111ea93f2bc4d52bdff0cf751db785",
+      "current_file": "src/h/bridge_wide_memory_user_spec.py"
+    },
+    "h_gate_memory_flow_user_spec.py": {
+      "archived_sha256": "658a21fea6202cc3476e35ad49c65fd3e7c7039a50ee9f5a5c4b554a8c99a1e6",
+      "current_file": "src/h/h_gate_memory_flow_user_spec.py"
+    },
+    "standard_trivalent_memory.py": {
+      "archived_sha256": "542dcdc7c739b4f7591a5b6331526e9cc84b96676a2a7224e3d2f61d0c6339b7",
+      "current_file": "src/h/standard_trivalent_memory.py"
+    },
+    "standard_trivalent_surface_code.py": {
+      "archived_sha256": "2bc66be89befd4d63bd0503e8e55c01d1b8db312c5ad738d996092cbda3b9678",
+      "current_file": "src/h/standard_trivalent_surface_code.py"
+    },
+    "wide_h_generator.py": {
+      "archived_sha256": "564318966a76589e4ce5bd84cac39411fea9f98e4925c29720a7a8c171142e96",
+      "current_file": "src/h/wide_h_generator.py"
+    },
+    "wide_h_memory.py": {
+      "archived_sha256": "333a2a18a0bccead05b96bb714ff4ba4f4025ca1702b1d830bce45de9ca3261e",
+      "current_file": "src/h/wide_h_memory.py"
+    },
+    "run_si1000_h_flow.py": {
+      "archived_sha256": "f8d424623ecf6929e3fe4e1e7037599ff0b4a230b4534df1c645e3b836588227",
+      "current_file": null
+    }
+  },
+  "contexts": {
+    "af9d860adb4c9c17863f2d61f1bdc014b73acb661b406efc060924609cb07977": {
+      "decoder": "pymatching_correlated",
+      "versions": {
+        "stim": "1.16.0",
+        "pymatching": "2.3.1",
+        "numpy": "2.4.4",
+        "python": "3.12.14 (main, Sep  2 2026, 23:27:36) [GCC 15.3.0]"
+      },
+      "batch_size": 2048,
+      "plan_sha256": "9c8218683c3ab36f3a0d87bdbd0890cf65a69a08152529291818005e2ee9d3f5"
+    }
+  }
+}

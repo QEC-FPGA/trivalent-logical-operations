@@ -1,0 +1,38 @@
+[
+  {
+    "name": "fig09-frozen-circuits.tar.gz",
+    "sha256": "fba0a95aec7daa041ef73b2bc2d0f7df87c84eb1913cc61184514efba517e3ef",
+    "bytes": 56007818,
+    "files": 325,
+    "destination": "bundles/fig09-frozen-circuits"
+  },
+  {
+    "name": "fig12-confirmation.tar.gz",
+    "sha256": "10f37090d14eb5524a195091dad9eb360b63f253a8415b36cf0c1b23ccf4c53b",
+    "bytes": 37199916,
+    "files": 328,
+    "destination": "bundles/fig12-confirmation"
+  },
+  {
+    "name": "fig10-11-records.tar.gz",
+    "sha256": "bd48e064fdb5167f255a7ecc5cb1a2a0d920ce6d0800f82fef92f539bd6a3182",
+    "bytes": 58081605,
+    "files": 105,
+    "destination": "bundles/fig10-11-records"
+  },
+  {
+    "name": "distance-evidence.tar.gz",
+    "sha256": "678bf44324795da8ae7b466309a64a4446d4e49e7861c7ccd003010c955e8869",
+    "bytes": 4324058,
+    "files": 2562,
+    "destination": "bundles/distance-evidence"
+  },
+  {
+    "name": "strict-distance-pair-indexes.tar.gz",
+    "sha256": "140b5c354362e73f21fa3149a7abf3ff6037b295a5b52f2fce21ad4a40ec6fa4",
+    "bytes": 1553916713,
+    "files": 3,
+    "destination": "bundles/strict-distance-d5-d7",
+    "optional": true
+  }
+]

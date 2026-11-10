@@ -1,0 +1,67 @@
+[
+  {
+    "d": 13,
+    "W": 7,
+    "channel": "XY",
+    "p": 0.0005,
+    "cohorts": [
+      {
+        "cohort": "p0005_five_2716bba6e708ae6d",
+        "point_id": "d13_s2_W7_XY_p0.0005",
+        "shots": 14028000000,
+        "errors": 854,
+        "shards": 14028
+      }
+    ],
+    "shots": 14028000000,
+    "errors": 854
+  },
+  {
+    "d": 13,
+    "W": 7,
+    "channel": "XY",
+    "p": 0.001,
+    "cohorts": [
+      {
+        "cohort": "p001_29c6fb7fe356d0ba",
+        "point_id": "d13_s2_W7_XY_p0.001",
+        "shots": 92600000,
+        "errors": 1010,
+        "shards": 926
+      },
+      {
+        "cohort": "S_gate_ratio_tiered_v3_20261011",
+        "point_id": "d13_W7_XY_p0.001",
+        "shots": 249088000,
+        "errors": 2727,
+        "shards": 1457
+      }
+    ],
+    "shots": 341688000,
+    "errors": 3737
+  },
+  {
+    "d": 13,
+    "W": 7,
+    "channel": "XY",
+    "p": 0.002,
+    "cohorts": [
+      {
+        "cohort": "main_35266d2721397999",
+        "point_id": "d13_s2_W7_XY_p0.002",
+        "shots": 500000,
+        "errors": 1192,
+        "shards": 5
+      },
+      {
+        "cohort": "S_gate_ratio_tiered_v3_20261011",
+        "point_id": "d13_W7_XY_p0.002",
+        "shots": 1172000,
+        "errors": 2723,
+        "shards": 14
+      }
+    ],
+    "shots": 1672000,
+    "errors": 3915
+  }
+]

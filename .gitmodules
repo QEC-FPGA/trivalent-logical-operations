@@ -1,0 +1,3 @@
+[submodule "third_party/midout"]
+	path = third_party/midout
+	url = ../midout_3-CX

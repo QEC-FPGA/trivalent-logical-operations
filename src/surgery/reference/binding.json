@@ -1,0 +1,16 @@
+{
+  "reference_sha256": "6643134e68cfb8ed5c36f3203ae0ef2861217915b15298719bfca27686bf7c08",
+  "ideal_prefix_instructions": 97,
+  "physical_body_instructions": 314,
+  "ideal_suffix_instructions": 1,
+  "reference_qubits": [
+    109,
+    110
+  ],
+  "physical_qubits": 109,
+  "merge_rounds": 5,
+  "source_basis": "user-supplied repaired d5 circuit",
+  "repair_scope": "staggered seam preparation plus six entry detectors; operation order and observables retained",
+  "already_validated_by_author": true,
+  "revalidation_run_this_turn": false
+}

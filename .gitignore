@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+bundles/
+out/
+src/s/output/
+src/s_lowp/output/
+
+# Outputs from local reproduction and sampling
+src/h/samples/
+.pytest_cache/
+*.egg-info/
+
+/paper/manuscript.*
+
+/reproduced_figures/

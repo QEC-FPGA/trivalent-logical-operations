@@ -1,0 +1,37 @@
+[
+  {
+    "id": "d11_W1_XY_p00005",
+    "case": "d11_s2_W1_XY",
+    "group": "d11_W1_XY_p00005",
+    "d": 11,
+    "step": 2,
+    "W": 1,
+    "T": 3,
+    "channel": "XY",
+    "p": "0.0005",
+    "moves": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "between_rounds": 2,
+    "old_Wc": 5,
+    "gate_extraction_rounds": 21,
+    "pilot_shots": 1000000,
+    "fixed_confirmation_shots": 2000000000,
+    "parts": 4,
+    "shots": 2000000000,
+    "mistakes": 1796,
+    "rate": 8.98e-07,
+    "extraction_rounds": 32,
+    "two_qubit_layers": 128,
+    "ticks": 256,
+    "plan_id": "d11_W1_XY_p00005_fixed_86d7094107aae99c",
+    "lo95": 8.574183871547127e-07,
+    "hi95": 9.405023388023152e-07,
+    "report_id": "s_lowp/d11_W1_XY_p00005_counts#0",
+    "source_shards": 2000,
+    "membership_sha256": "bded548c44dcce92e50a2e1bf9753eb0ac168acaea7ec44d35c51a4c1d1e53d0"
+  }
+]

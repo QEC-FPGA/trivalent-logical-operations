@@ -1,0 +1,89 @@
+{
+  "referenced": 111,
+  "available": 101,
+  "missing_sha256": [
+    "1be4755e239b1c9021d02cc2e122352026fd7351c269391aee86e5f294d07af7",
+    "1dc52b5ba9f8cbf53abaa3cbe9b4bf52a679b1d870c4c049e82beafe0776316c",
+    "26d649620d0d15879f04e1bd248cdd9aead5de39a74cd542ddac21526b660d83",
+    "401224843c3aae9068444c43bc68557c12f06b6f281308e7dfaa831b81dfdab6",
+    "529eb9f8f3c97d48c84f6d243cad4f8d0d98f22100ff7e9ddbd56629ddb867b2",
+    "61443405913644897bc8f18418876eaa2ebda9be9828e95562835aa85e6f579b",
+    "752db190b5b690adcb12e865edad6e1ad2f03717e865338323a5a4341b143e02",
+    "7a96075b7b8c1be3c7621f9f5a7dd57b30510b7a7f330346cffd394f833e1904",
+    "be36101ea0420e7aeee315609421cc13c3a515a93cdbe57c7c1d5f6a7e6f50ff",
+    "fedd34c19c4e069a051db5db85c048eec28d4e8cd32a41757a71c04af335633b"
+  ],
+  "interpretation": "SHA256 coverage of frozen sampling circuits and DEMs referenced by the selected records. Counts and raw records remain usable without regenerating these inputs.",
+  "lowp_bindings": [
+    {
+      "id": "d11_W1_XY_p00005",
+      "plan_id": "d11_W1_XY_p00005_fixed_86d7094107aae99c",
+      "input_hash_pairs": [
+        {
+          "circuit_sha256": "1be4755e239b1c9021d02cc2e122352026fd7351c269391aee86e5f294d07af7",
+          "dem_sha256": "401224843c3aae9068444c43bc68557c12f06b6f281308e7dfaa831b81dfdab6"
+        }
+      ],
+      "frozen_inputs_available": false
+    },
+    {
+      "id": "d11_W3_XY_p00005",
+      "plan_id": "d11_W3_XY_p00005_fixed_c30039ebd3c8fa52",
+      "input_hash_pairs": [
+        {
+          "circuit_sha256": "79a31af0e5ab08c8842d963d3f0afc4fa3cac47ea3c50f47510611e14ca266ee",
+          "dem_sha256": "d1f20123b1be14fa9aefad05fac54e0133aea75f8433235c1d09514e29b14934"
+        }
+      ],
+      "frozen_inputs_available": true
+    },
+    {
+      "id": "d11_W5_XY_p00005",
+      "plan_id": "d11_W5_XY_p00005_fixed_092117171ed27d00",
+      "input_hash_pairs": [
+        {
+          "circuit_sha256": "fedd34c19c4e069a051db5db85c048eec28d4e8cd32a41757a71c04af335633b",
+          "dem_sha256": "1dc52b5ba9f8cbf53abaa3cbe9b4bf52a679b1d870c4c049e82beafe0776316c"
+        }
+      ],
+      "frozen_inputs_available": false
+    },
+    {
+      "id": "d11_W5_ZZ_p00005",
+      "plan_id": "d11_W5_ZZ_p00005_fixed_7821f3176ac5280c",
+      "input_hash_pairs": [
+        {
+          "circuit_sha256": "752db190b5b690adcb12e865edad6e1ad2f03717e865338323a5a4341b143e02",
+          "dem_sha256": "529eb9f8f3c97d48c84f6d243cad4f8d0d98f22100ff7e9ddbd56629ddb867b2"
+        }
+      ],
+      "frozen_inputs_available": false
+    },
+    {
+      "id": "d11_W5_ZZ_p0001",
+      "plan_id": "d11_W5_ZZ_p0001_fixed_3232cd545fb3e27b",
+      "input_hash_pairs": [
+        {
+          "circuit_sha256": "7a96075b7b8c1be3c7621f9f5a7dd57b30510b7a7f330346cffd394f833e1904",
+          "dem_sha256": "61443405913644897bc8f18418876eaa2ebda9be9828e95562835aa85e6f579b"
+        }
+      ],
+      "frozen_inputs_available": false
+    },
+    {
+      "id": "d9_W5_ZZ_p00005",
+      "plan_id": "d9_W5_ZZ_p00005_fixed_d714feddc04c2671",
+      "input_hash_pairs": [
+        {
+          "circuit_sha256": "26d649620d0d15879f04e1bd248cdd9aead5de39a74cd542ddac21526b660d83",
+          "dem_sha256": "be36101ea0420e7aeee315609421cc13c3a515a93cdbe57c7c1d5f6a7e6f50ff"
+        }
+      ],
+      "frozen_inputs_available": false
+    }
+  ],
+  "additional_inputs_in_attachment": {
+    "d1f20123b1be14fa9aefad05fac54e0133aea75f8433235c1d09514e29b14934": "artifacts/d1f20123b1be14fa9aefad05fac54e0133aea75f8433235c1d09514e29b14934.dem",
+    "79a31af0e5ab08c8842d963d3f0afc4fa3cac47ea3c50f47510611e14ca266ee": "artifacts/79a31af0e5ab08c8842d963d3f0afc4fa3cac47ea3c50f47510611e14ca266ee.stim"
+  }
+}
