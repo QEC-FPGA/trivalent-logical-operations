@@ -53,15 +53,16 @@ def case_dir(spec):return ROOT/'cases'/spec['id']
 def result_dir(spec):return ROOT/'results'/spec['id']
 def export_plan():
     rows=plan();write(ROOT/'matrix.json',dict(version=VERSION,conditions=rows,count=len(rows)))
-    lines=['三轮尾段：去重后的实际移动路线','最后一个数字是转成 fullwall 的跨度；其前的位置均保留 B,A,B 三轮。',
-           '其余中间位置提取 B,A 两轮；一轮是一次 A 或 B 提取。','']
+    lines=['Three-round tails: deduplicated movement routes',
+           'The final number is the span of the transition to fullwall; the preceding position retains three B,A,B rounds.',
+           'Other intermediate positions use two B,A rounds; one round is one A or B extraction.','']
     for d in (5,7,9):
-        lines.append(f'd={d}：W={2*((d+6)//6)+1}、{d}；每条路线分别生成 XY、ZZ。')
+        lines.append(f'd={d}: W={2*((d+6)//6)+1}, {d}; each route generates XY and ZZ.')
         for r in routes(d):
-            aliases='；'.join(f"{a['family']}/{a['tail_policy']}:q{a['requested_q']}→q{a['actual_q']}" for a in r['aliases'])
-            lines.append(f"  {'+'.join(map(str,r['moves']))}；逐位置提取={r['holds']}；{aliases}")
+            aliases='; '.join(f"{a['family']}/{a['tail_policy']}:q{a['requested_q']}->q{a['actual_q']}" for a in r['aliases'])
+            lines.append(f"  {'+'.join(map(str,r['moves']))}; extraction rounds per position={r['holds']}; {aliases}")
         lines.append('')
-    lines += ['d=5 的所有请求均退化为 2+3，只有一条实际路线，不能据此讨论大步长效果。',
-        'd=7 的 2+5 和 d=9 的 2+7，前段实际仅移动两格；它们检验尾段转换，不是内部三/四/五格移动实验。',
-        '重复路线只搜索一次，matrix.json 的 aliases 保留全部请求对应关系。']
-    (ROOT/'线路清单.txt').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+    lines += ['All requests at d=5 reduce to 2+3, leaving one actual route; they cannot establish the effect of larger steps.',
+        'The 2+5 route at d=7 and 2+7 route at d=9 move only two cells before the tail; they test the tail transition, not internal three-, four- or five-cell moves.',
+        'Duplicate routes are searched once; aliases in matrix.json retain all request mappings.']
+    (ROOT/'route_summary.txt').write_text('\n'.join(lines)+'\n',encoding='utf-8')

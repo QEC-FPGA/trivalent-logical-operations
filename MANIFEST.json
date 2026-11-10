@@ -21,8 +21,8 @@
       "sha256": "51a6d7978db513dcac0a8c207338a060cc1694a79ecc560c7c6b24030beed628"
     },
     "README.md": {
-      "bytes": 1753,
-      "sha256": "c9ed1f1267573b2a5b84dc23c61fe4f69dd1e1a2a0811e6ee177dd11c873ad2f"
+      "bytes": 2243,
+      "sha256": "24835de9595e2cdf59d211904e23528d995e5d56d5bc578505aa1335dffcad9b"
     },
     "data/counts/fig09_H_counts.csv": {
       "bytes": 24507,
@@ -141,12 +141,12 @@
       "sha256": "8fd983061f36334dd3a22832d42ed5417ac2c7dc9732bd54674f8c8d88a4e545"
     },
     "docs/DATA.md": {
-      "bytes": 3107,
-      "sha256": "99537490fb6e0715b5ef4f1467902ffaf937bbee39a3478e55907b6e5488bd62"
+      "bytes": 3964,
+      "sha256": "da1eca4721f22c57fd76f2338b807b62da85b03a708ec365ac5030ff62fcdb78"
     },
     "docs/REPRODUCIBILITY.md": {
-      "bytes": 5850,
-      "sha256": "e2b1c317c2e252a39c3191117bd8f2d9f90651143973f5b37e193b0faa10e77c"
+      "bytes": 6865,
+      "sha256": "f36eb936495d15d2ab855de4d2274082a711ae9301f6a8cd52e1a5177ab5c18e"
     },
     "release-assets.json": {
       "bytes": 1143,
@@ -665,8 +665,8 @@
       "sha256": "373eb524ab5a1c587a8b5069b94fe495eeb14fe72582802a9091675c4a44f79d"
     },
     "src/strict_search/support.py": {
-      "bytes": 4038,
-      "sha256": "32e66cb2c29e32740a7843b5e6d77b8a9988001b6086a03520e0b66299c5b9b4"
+      "bytes": 4128,
+      "sha256": "3165b5eeb6b18cee38dad82dea8b5b086c5c2c2ebaabf92a12596b561a223abc"
     },
     "src/strict_search/terminal_move.py": {
       "bytes": 5721,

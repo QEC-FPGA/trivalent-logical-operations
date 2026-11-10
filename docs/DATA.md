@@ -1,31 +1,29 @@
-# 数据与附件
+# Data and archives
 
-`data/counts/` 中图 9–12 的计数表共 275 行；表 C1 另含 7 行轮次对照。
-`data/h/stats.csv` 保存 254 个 H 分片，`protocol.json` 保存共用配置。
-`data/w3/`、`data/s_lowp/` 保存 15 份 S 报告；`data/fig10_d13_cohorts.json`
-固定图 10 中三个 d=13 点的批次组合。`data/injection/` 的两份 Stim 线路定义注入及理想传播检查，不是完整装置的含噪采样数据。
+The tables for Figures 9-12 in `data/counts/` contain 275 rows; Table C1 contains another seven rows comparing round counts. `data/h/stats.csv` contains 254 H sampling shards, with shared settings in `protocol.json`. `data/w3/` and `data/s_lowp/` contain 15 S reports. `data/fig10_d13_cohorts.json` fixes the cohort combinations for three d=13 points in Figure 10. The two Stim files in `data/injection/` define injection and ideal propagation checks; they are not noisy sampling data for a complete device.
 
-| 附件 | 内容 | 使用场景 |
+Download the data archives from [Zenodo](https://doi.org/10.5281/zenodo.24113458).
+
+| Archive | Contents | Use |
 | --- | --- | --- |
-| `fig09-frozen-circuits.tar.gz` | 108 组 H/记忆线路、DEM 与输入参数 | 复用精确输入重新采样 |
-| `fig10-11-records.tar.gz` | 189,792 行 S 分片、68 份共用配置及 101 个冻结输入文件 | 核对报告成员和计数，复用 S 输入 |
-| `fig12-confirmation.tar.gz` | 81 组线路/DEM/理想边界及 503 行四比特残差统计 | 重算各类联合测量失败数或重新采样 |
-| `distance-evidence.tar.gz` | d3 证书、四个 d5/d7 搜索档案、12 组附录 C/W3 故障实例 | 距离与故障重放；不用于统计图重绘 |
-| `strict-distance-pair-indexes.tar.gz` | 两个已生成的 d5 配对索引 | 单独可选缓存，省去索引构建；核心交付包不含此文件 |
+| `fig09-frozen-circuits.tar.gz` | 108 H/memory circuit sets, detector error models (DEMs) and input parameters | Reuse exact inputs for new sampling |
+| `fig10-11-records.tar.gz` | 189,792 S shard records, 68 shared configurations and 101 frozen input files | Check report membership and counts; reuse S inputs |
+| `fig12-confirmation.tar.gz` | 81 circuit/DEM/ideal-boundary sets and 503 rows of four-bit residual statistics | Recompute joint-measurement failure counts or resample |
+| `distance-evidence.tar.gz` | d=3 certificates, four d=5/d=7 search archives and 12 Appendix C/W3 fault cases | Verify distance evidence and replay faults; not needed for plotting |
+| `strict-distance-pair-indexes.tar.gz` | Two precomputed d=5 pair indexes | Optional separate cache that avoids rebuilding indexes; not included in the core download package |
 
-附件的字节数和 SHA256 见根目录 `release-assets.json`，每个附件另有成员清单。
-`distance-evidence` 中 d5/d7 的分区结果与其引用的分片、模型、故障签名及物理实现绑定，用于核对归档搜索范围和结果。d3 以固定 Stim 线路为输入核验距离。
+Archive sizes and SHA-256 checksums are recorded in `release-assets.json`. Each archive also includes a member manifest. The d=5/d=7 partition results in `distance-evidence` are bound to their referenced shards, models, fault signatures and physical realizations, allowing the archived search coverage and results to be checked. The d=3 checks use fixed Stim circuits as inputs.
 
-## 统计口径与身份
+## Statistical conventions and record identity
 
-S 附件 `stats.csv` 每行对应一个完成的正式分片，保留批次、条件、种子、样本数、失败数、输入哈希及原始分片哈希。`contexts.json` 只保存一份各组共用的线路和译码配置。`report_ids` 指定该分片参与的报告；空值不表示分片无效。15 份报告分别合计引用 122,700 个 W3 分片和 28,200 个低错误率分片，报告中的集合摘要用于检查精确成员。
+Each row of the S archive's `stats.csv` is one completed production shard. It retains the cohort, condition, seed, sample count, failure count, input hashes and original shard hash. `contexts.json` stores one copy of each shared circuit and decoder configuration. `report_ids` identifies the reports using a shard; an empty value does not make the shard invalid. The 15 reports reference 122,700 W3 shards and 28,200 low-error-rate shards in total. Set digests in the reports verify exact membership.
 
-`record_sha256` 标识规范化前的原始 JSON 字节，不表示附件还提供相应逐条文件。空白 `batch_size` 表示原记录未报告该项。`data/s_cohort_counts.csv` 是逐批汇总，不能仅按 d、W、p 跨批合并。
+`record_sha256` identifies the original JSON bytes before normalization; it does not imply that those individual JSON files are also included. An empty `batch_size` means that the original record did not report it. `data/s_cohort_counts.csv` contains per-cohort aggregates. Do not merge cohorts solely because d, W and p match.
 
-图 12 保留 16 个残差箱。除零号箱外均为总失败；最低位表示联合测量失败，另外三位表示剩余可观测量失败。由此可重算联合失败、剩余失败、同时失败与总失败。
+Figure 12 retains all 16 residual bins. Every bin except zero counts as an overall failure. The least significant bit indicates a joint-measurement failure; the other three bits indicate failures of the retained observables. These bins allow joint, retained, simultaneous and overall failure counts to be recomputed.
 
-## 已知覆盖范围
+## Coverage and limitations
 
-- 已提供 101/111 个被 S 分片引用的冻结输入文件。其余 10 个涉及五组条件，准确哈希见 `data/s_input_coverage.json`。已有计数和重绘可核对；不能声称所有原采样输入均已逐字节提供。
-- 图 10 另有 29 行历史汇总尚未建立完整逐分片成员关系，以公开计数表为依据。数据包中参数相同的记录不能自动视为其全部来源。
-- d3 证书检查重算给定线路的故障签名排除与上界重放；d5/d7 检查验证已存模型、哈希和分区覆盖，不是重新完成全部穷举。W3 的权重 11、12、14 见证只证明上界。
+- The archive supplies 101 of the 111 frozen input files referenced by S shards. The remaining ten concern five conditions; their exact hashes are listed in `data/s_input_coverage.json`. The archived counts and plots can be checked, but not every original sampling input is available byte for byte.
+- Another 29 historical aggregate rows in Figure 10 lack complete shard membership. Use the published count table for these rows; records with matching parameters in the archive cannot automatically be treated as their complete source.
+- The d=3 certificate check recomputes fault-signature exclusions and replays upper-bound witnesses for the specified circuits. The d=5/d=7 checks verify stored models, hashes and partition coverage; they do not repeat the full exhaustive search. W3 witnesses of weights 11, 12 and 14 establish upper bounds only.
